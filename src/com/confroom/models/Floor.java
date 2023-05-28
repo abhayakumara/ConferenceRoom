@@ -5,13 +5,11 @@ import java.util.List;
 public class Floor {
     private Long id;
     private String floorName;
-    private Long buildingId;
     private List<ConfRoom> confRoomList;
 
-    public Floor(Long id, String floorName, Long buildingId, List<ConfRoom> confRoomList) {
+    public Floor(Long id, String floorName, List<ConfRoom> confRoomList) {
         this.id = id;
         this.floorName = floorName;
-        this.buildingId = buildingId;
         this.confRoomList = confRoomList;
     }
 
@@ -31,19 +29,20 @@ public class Floor {
         this.floorName = floorName;
     }
 
-    public Long getBuildingId() {
-        return buildingId;
-    }
-
-    public void setBuildingId(Long buildingId) {
-        this.buildingId = buildingId;
-    }
-
     public List<ConfRoom> getConfRoomList() {
         return confRoomList;
     }
 
     public void setConfRoomList(List<ConfRoom> confRoomList) {
         this.confRoomList = confRoomList;
+    }
+
+    @Override
+    public String toString() {
+        return "Floor{" +
+                "id=" + id +
+                ", floorName='" + floorName + '\'' +
+                ", confRoomList=" + confRoomList +
+                '}';
     }
 }

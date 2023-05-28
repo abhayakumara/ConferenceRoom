@@ -14,8 +14,8 @@ public class FloorController {
         this.floorService = floorService;
     }
 
-    public Floor addFloor(Long id, String floorName, Long buildingId, List<ConfRoom> confRoomList) {
-        return this.floorService.addFloor(id, floorName, buildingId, confRoomList);
+    public Floor addFloor(Long id, String floorName, List<ConfRoom> confRoomList) {
+        return this.floorService.addFloor(id, floorName, confRoomList);
     }
 
 }

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface FloorService {
 
-    Floor addFloor(Long id, String floorName, Long buildingId, List<ConfRoom> confRoomList);
+    Floor addFloor(Long id, String floorName, List<ConfRoom> confRoomList);
 }

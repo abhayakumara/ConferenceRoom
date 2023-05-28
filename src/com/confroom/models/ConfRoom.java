@@ -1,22 +1,18 @@
 package com.confroom.models;
 
+import java.util.List;
+
 public class ConfRoom {
     private Long id;
     private String name;
-    private Long floorId;
-    private Long buildingId;
     private Boolean isAvailable;
-    private Integer startTime;
-    private Integer endTime;
+    private List<Slot> slots;
 
-    public ConfRoom(Long id, String name, Long floorId, Long buildingId, Integer startTime, Integer endTime) {
+    public ConfRoom(Long id, String name, Boolean isAvailable, List<Slot> slots) {
         this.id = id;
         this.name = name;
-        this.floorId = floorId;
-        this.buildingId = buildingId;
-        this.isAvailable = true;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.isAvailable = isAvailable;
+        this.slots = slots;
     }
 
     public Long getId() {
@@ -35,22 +31,6 @@ public class ConfRoom {
         this.name = name;
     }
 
-    public Long getFloorId() {
-        return floorId;
-    }
-
-    public void setFloorId(Long floorId) {
-        this.floorId = floorId;
-    }
-
-    public Long getBuildingId() {
-        return buildingId;
-    }
-
-    public void setBuildingId(Long buildingId) {
-        this.buildingId = buildingId;
-    }
-
     public Boolean getAvailable() {
         return isAvailable;
     }
@@ -59,19 +39,21 @@ public class ConfRoom {
         isAvailable = available;
     }
 
-    public Integer getStartTime() {
-        return startTime;
+    public List<Slot> getSlots() {
+        return slots;
     }
 
-    public void setStartTime(Integer startTime) {
-        this.startTime = startTime;
+    public void setSlots(List<Slot> slots) {
+        this.slots = slots;
     }
 
-    public Integer getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Integer endTime) {
-        this.endTime = endTime;
+    @Override
+    public String toString() {
+        return "ConfRoom{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", isAvailable=" + isAvailable +
+                ", slots=" + slots +
+                '}';
     }
 }

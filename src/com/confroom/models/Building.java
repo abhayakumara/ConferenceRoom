@@ -36,4 +36,13 @@ public class Building {
     public void setFloors(List<Floor> floors) {
         this.floors = floors;
     }
+
+    @Override
+    public String toString() {
+        return "Building{" +
+                "id=" + id +
+                ", buildingName='" + buildingName + '\'' +
+                ", floors=" + floors +
+                '}';
+    }
 }

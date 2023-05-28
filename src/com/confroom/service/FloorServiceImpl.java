@@ -9,8 +9,8 @@ import java.util.List;
 public class FloorServiceImpl implements FloorService{
 
     @Override
-    public Floor addFloor(Long id, String floorName, Long buildingId, List<ConfRoom> confRoomList) {
-        Floor floor = new Floor(id, floorName, buildingId,confRoomList);
+    public Floor addFloor(Long id, String floorName, List<ConfRoom> confRoomList) {
+        Floor floor = new Floor(id, floorName,confRoomList);
         Storage.floorMap.put(floor.getId(), floor);
         return floor;
     }
